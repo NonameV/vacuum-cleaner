@@ -7,13 +7,19 @@ h1{
 h2, h1{
     font-weight: 700;
 }
+h1{
+    font-size: 62px;
+}
+h2{
+    font-size: 42px;
+}
 header{
     .column{
         display: flex;
         align-items: center;
     }
     .buy{
-        color: #000;
+        color: #fff;
         text-decoration: none;
         padding: 10px 20px;
         border: 2px solid #000;
@@ -43,7 +49,8 @@ header{
     margin: 0;
 }
 .her0{
-    background-image: url('./assets/hero-bg.jpg');
+    color: #fff;
+    
     height: 600px;
     background-position: center center;
     background-attachment: fixed;
@@ -57,16 +64,22 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         p{
             font-weight: 600;
-            text-shadow: 1px 1px 2px #fff;
-            font-size: 18px;
+            
+            font-size: 20px;
         }
     }
 }
-
+.grid-section, .slider{
+    background: #fff;
+}
 .desc-section{
     padding: 50px 0;
+    h2, p{
+        color: #fff;
+    }
     .left-col{
         object-fit: contain;
         img{
@@ -162,8 +175,51 @@ header{
         bottom: 0;
     }
 }
+  .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;//
+  .bgcover {
+      background-image: url('https:/cf-images.us-east-1.prod.boltdns.net/v1/static/66036796001/66cd4093-29a5-429d-993f-5b1c2cdfe7b1/0739df86-0732-4f09-a070-64dad629a06a/1280x720/match/image.jpg');
+      background-position: center;
+      background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+    }
+  }
+}
 
+@media screen and (max-width: 1200px) {
+    .desc-section .left-col{
+        display:  flex;
+        align-items: center;
+    }
+    h1{
+        font-size: 42px;
+    }
+    h2{
+        font-size: 36px;
+    }
+}
 @media screen and (max-width: 768px) {
+    .vacuum-wrapper{
+        display: none;
+    }
+    .bgcover{
+        background-image: url('./assets/fit_930_519_false_crop_1349_759_10_7_q90_419162_fcaf1fcbb5ef19b0a850ee4b2.png') !important;
+    }
     .title-wrapper p, .title-wrapper h1{
         text-align: center;
     }

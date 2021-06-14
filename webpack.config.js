@@ -3,7 +3,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     // context: '/src',
     entry: {
         app: './src/app.js',
@@ -19,6 +19,7 @@ module.exports = {
         port: 9000,
         hot: true,
         host: 'localhost',
+        liveReload: true,
         historyApiFallback: true
     },
     module: {
