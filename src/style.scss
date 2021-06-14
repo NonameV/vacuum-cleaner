@@ -43,6 +43,10 @@ header{
     margin: 0;
 }
 .her0{
+    background-image: url('./assets/hero-bg.jpg');
+    height: 600px;
+    background-position: center center;
+    background-attachment: fixed;
     .container{
         height: 100%;
         .row{
