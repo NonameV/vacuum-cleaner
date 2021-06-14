@@ -1,3 +1,35 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+h1{
+    text-shadow: 1px 1px 2px #fff;
+}
+h2, h1{
+    font-weight: 700;
+}
+header{
+    .column{
+        display: flex;
+        align-items: center;
+    }
+    .buy{
+        color: #000;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid #000;
+        font-size: 18px;
+        transition: 0.3s;
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    .right-col{
+        justify-content: flex-end;
+    }
+    .logo{
+        width: 150px;
+    }
+}
 .vacuum-wrapper{
     overflow: hidden;
     width: 100%;
@@ -6,8 +38,9 @@
     background-size: contain;
     background-repeat: no-repeat ;
 }
-.row{
+.clog-technology .row{
     max-width: 100%;
+    margin: 0;
 }
 .her0{
     .container{
@@ -20,6 +53,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        p{
+            font-weight: 600;
+            text-shadow: 1px 1px 2px #fff;
+            font-size: 18px;
+        }
     }
 }
 
@@ -32,7 +70,9 @@
         } 
     }
     .right-col{
-
+        p{
+            line-height: 1.6;
+        }
     }
 }
 
@@ -118,3 +158,39 @@
         bottom: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .title-wrapper p, .title-wrapper h1{
+        text-align: center;
+    }
+    header{
+        padding: 0 0 20px 0;
+    }
+    header .buy{
+        font-size: 14px;
+    }
+    header .column{
+        justify-content: center;
+    }
+    .desc-section .left-col img{
+        margin-bottom: 20px;
+    }
+    .clog-technology .right-col{
+        padding-top: 15px;
+    }
+    .grid{
+        grid-template-areas:
+        "bi bi bi bi"
+        "bi bi bi bi"
+        "b b c c"
+        "sb sb sb sb"; 
+}
+  }
+  @media screen and (max-width: 400px) {
+    header .buy{
+        text-align: center;
+    }
+    .big-img{
+        object-fit: cover;
+    }
+  }
