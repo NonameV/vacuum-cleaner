@@ -111,41 +111,7 @@ header{
 .grid-section{
     padding: 50px 0;
 }
-.grid{
-    display: grid;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    grid-template-areas: 
-            "b c bi bi"
-            "sb sb bi bi";
-            img{
-                width: 100%;
-                transition: 0.3s;
-                position: relative;
-                height: 100%;
-                &:hover{
-                    
-                }
-                &:before{
-                    content: attr(data-test);
-                    background-color: red;
-                    width: 200px;
-                    height: 200px;
-                }
-            }
-    .brash{
-        grid-area: b;
-    }
-    .cleaner{
-        grid-area: c;
-    }
-    .big-img{
-        grid-area: bi;
-    }
-    .small-brash{
-        grid-area: sb;
-    }
-}
+
 .carousel-inner{
     img{
         max-height: 700px;
@@ -255,29 +221,63 @@ header{
     }
   }
 
-
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    &>*{
+        margin-bottom: 20px;
+    }
+  }
+  .big-img{
+      order: 1;
+      width: 100%;
+  }
+  .brash{
+      order: 2;
+      width: 100%;
+  }
+  .cleaner{
+      order: 3;
+      width: 100%;
+  }
+  .small-brash{
+      order: 4;
+      width: 100%;
+  }
   @supports (display: grid) {
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      &>*{
-          margin-bottom: 20px;
-      }
-    }
-    .big-img{
-        order: 1;
-        width: 100%;
-    }
-    .brash{
-        order: 2;
-        width: 100%;
-    }
-    .cleaner{
-        order: 3;
-        width: 100%;
-    }
-    .small-brash{
-        order: 4;
-        width: 100%;
+    .grid{
+        display: grid;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-areas: 
+                "b c bi bi"
+                "sb sb bi bi";
+                img{
+                    width: 100%;
+                    transition: 0.3s;
+                    position: relative;
+                    height: 100%;
+                    &:hover{
+                        
+                    }
+                    &:before{
+                        content: attr(data-test);
+                        background-color: red;
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+        .brash{
+            grid-area: b;
+        }
+        .cleaner{
+            grid-area: c;
+        }
+        .big-img{
+            grid-area: bi;
+        }
+        .small-brash{
+            grid-area: sb;
+        }
     }
    }
