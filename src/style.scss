@@ -22,11 +22,17 @@ header{
         color: #fff;
         text-decoration: none;
         padding: 10px 20px;
-        border: 2px solid #000;
+        border: 2px solid transparent;
         font-size: 18px;
         transition: 0.3s;
+        display: flex;
+        align-items: center;
+        img{
+            width: 25px;
+            margin-left: 10px;
+        }
         &:hover{
-            transform: scale(1.2);
+            border: 2px solid #fff;
         }
     }
     .right-col{
@@ -162,7 +168,8 @@ header{
     .slide-text{
         width: 50%;
         display: inline-block;
-        text-align: center;
+        text-align: left;
+        padding-right: 10px;
     }
     .slide-img{
         width: 50%;
@@ -177,6 +184,9 @@ header{
     .slide-absolute-text{
         position: absolute;
         bottom: 0;
+    }
+    .washable-dust{
+        margin-top: 100px;
     }
 }
   .fixed {
@@ -204,7 +214,29 @@ header{
     }
   }
 }
-
+.top-arrow{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    img{
+        width: 80%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .turbo-brash{
+        display: flex;
+        align-items: center;
+    }
+}
 @media screen and (max-width: 1200px) {
     .grid{
         grid-template-rows: 300px 150px;
@@ -221,6 +253,28 @@ header{
     }
 }
 @media screen and (max-width: 768px) {
+    .turbo-brash{
+        display: none;
+    }
+    .slider .slide-text{
+        width: 100%;
+    }
+    .slider .slide-img{
+        width: 100%;
+    }
+    .washable-dust{
+        position: relative;
+    }
+    .washable-dust img{
+        margin-top: 200px;
+    }
+    .washable-dust .slide-absolute-text{
+        top: -110px;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 100%;
+    }
     .vacuum-wrapper{
         display: none;
     }
@@ -234,7 +288,8 @@ header{
         padding: 0 0 20px 0;
     }
     header .buy{
-        font-size: 14px;
+        font-size: 18px;
+        border: 2px solid #fff;
     }
     header .column{
         justify-content: center;
@@ -260,6 +315,12 @@ header{
     }
     .big-img{
         object-fit: cover;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    .buy{
+        font-size: 12px;
     }
   }
 
