@@ -254,3 +254,26 @@ header{
         object-fit: cover;
     }
   }
+
+
+  @supports (display: grid) {
+    .grid {
+      display: flex;
+    }
+    .big-img{
+        order: 1;
+        width: 100%;
+    }
+    .brash{
+        order: 2;
+        width: 50%;
+    }
+    .cleaner{
+        order: 3;
+        width: 50%;
+    }
+    .small-brash{
+        order: 4;
+        width: 100%;
+    }
+  }
