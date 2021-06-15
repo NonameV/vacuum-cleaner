@@ -75,6 +75,44 @@ header{
 .grid-section, .slider{
     background: #fff;
 }
+.grid{
+    display: grid;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-rows: 400px 200px;
+    grid-template-areas: 
+            "b c bi bi"
+            "sb sb bi bi";
+            img{
+                width: 100%;
+                transition: 0.3s;
+                position: relative;
+                height: 100%;
+                object-fit: cover;
+                &:hover{
+                    
+                }
+                &:before{
+                    content: attr(data-test);
+                    background-color: red;
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+    .brash{
+        grid-area: b;
+    }
+    .cleaner{
+        grid-area: c;
+    }
+    .big-img{
+        grid-area: bi;
+        object-position: left;
+    }
+    .small-brash{
+        grid-area: sb;
+    }
+}
 .desc-section{
     padding: 50px 0;
     h2, p{
@@ -168,6 +206,9 @@ header{
 }
 
 @media screen and (max-width: 1200px) {
+    .grid{
+        grid-template-rows: 300px 150px;
+    }
     .desc-section .left-col{
         display:  flex;
         align-items: center;
@@ -209,7 +250,8 @@ header{
         "bi bi bi bi"
         "bi bi bi bi"
         "b b c c"
-        "sb sb sb sb"; 
+        "sb sb sb sb";
+        grid-template-rows: 150px 150px 300px 100px;
 }
   }
   @media screen and (max-width: 400px) {
@@ -221,63 +263,4 @@ header{
     }
   }
 
-  .grid {
-    display: flex;
-    flex-wrap: wrap;
-    &>*{
-        margin-bottom: 20px;
-    }
-  }
-  .big-img{
-      order: 1;
-      width: 100%;
-  }
-  .brash{
-      order: 2;
-      width: 100%;
-  }
-  .cleaner{
-      order: 3;
-      width: 100%;
-  }
-  .small-brash{
-      order: 4;
-      width: 100%;
-  }
-  @supports (display: grid) {
-    .grid{
-        display: grid;
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-        grid-template-areas: 
-                "b c bi bi"
-                "sb sb bi bi";
-                img{
-                    width: 100%;
-                    transition: 0.3s;
-                    position: relative;
-                    height: 100%;
-                    &:hover{
-                        
-                    }
-                    &:before{
-                        content: attr(data-test);
-                        background-color: red;
-                        width: 200px;
-                        height: 200px;
-                    }
-                }
-        .brash{
-            grid-area: b;
-        }
-        .cleaner{
-            grid-area: c;
-        }
-        .big-img{
-            grid-area: bi;
-        }
-        .small-brash{
-            grid-area: sb;
-        }
-    }
-   }
+  
