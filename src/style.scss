@@ -317,7 +317,11 @@ header{
         object-fit: cover;
     }
   }
-
+  @media screen and (max-width: 378px) {
+    .slide-absolute-text h2{
+        font-size: 30px;
+    }
+  }
   @media screen and (max-width: 360px) {
     .buy{
         font-size: 12px;
