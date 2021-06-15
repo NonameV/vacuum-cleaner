@@ -13,28 +13,30 @@ h1{
 h2{
     font-size: 42px;
 }
+.buy{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    font-size: 18px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    img{
+        width: 25px;
+        margin-left: 10px;
+    }
+    &:hover{
+        border: 2px solid #fff;
+        color: #fff;
+    }
+}
 header{
     .column{
         display: flex;
         align-items: center;
     }
-    .buy{
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 20px;
-        border: 2px solid transparent;
-        font-size: 18px;
-        transition: 0.3s;
-        display: flex;
-        align-items: center;
-        img{
-            width: 25px;
-            margin-left: 10px;
-        }
-        &:hover{
-            border: 2px solid #fff;
-        }
-    }
+    
     .right-col{
         justify-content: flex-end;
     }
@@ -70,7 +72,7 @@ header{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
+        text-align: left;
         p{
             font-weight: 600;
             
@@ -231,10 +233,57 @@ header{
         width: 80%;
     }
 }
+.testimonials{
+    background:  right no-repeat url('./assets/image_2021-06-15_18-08-55.png');
+    background-size: cover;
+    padding: 50px 0;
+    color: #fff;
+    .testimonial{
+        margin-bottom: 50px;
+        background: rgba(0,0,0,0.5);
+        padding: 20px;
+        h3{
+            display: flex;
+            align-items: center;
+            img{
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+        }
+        p{
+            line-height: 1.7;
+        }
+        .testimonial-estimate-block{
+            display: flex;
+            img{
+                width: 30px;
+            }
+        }
+    } 
+    .buy-wrapper{
+        display: flex;
+        justify-content: center;
+    } 
+}
+.testimonials .buy{
+    color: #000;
+    justify-content: center;
+    margin-bottom: 50px;
+    &:hover{
+        color: #000;
+        border: 2px solid #000;
+
+    }
+}
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .turbo-brash{
         display: flex;
         align-items: center;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .testimonials{
+        background-position: left;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -253,6 +302,9 @@ header{
     }
 }
 @media screen and (max-width: 768px) {
+    .testimonials .buy{
+        border: 2px solid #000;
+    }
     .turbo-brash{
         display: none;
     }
@@ -287,7 +339,7 @@ header{
     header{
         padding: 0 0 20px 0;
     }
-    header .buy{
+    .buy{
         font-size: 18px;
         border: 2px solid #fff;
     }
@@ -310,7 +362,7 @@ header{
 }
   }
   @media screen and (max-width: 400px) {
-    header .buy{
+    .buy{
         text-align: center;
     }
     .big-img{
@@ -320,11 +372,6 @@ header{
   @media screen and (max-width: 378px) {
     .slide-absolute-text h2{
         font-size: 30px;
-    }
-  }
-  @media screen and (max-width: 360px) {
-    .buy{
-        font-size: 12px;
     }
   }
 
