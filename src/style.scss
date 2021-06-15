@@ -256,28 +256,28 @@ header{
   }
 
 
-//   @supports (display: grid) {
-//     .grid {
-//       display: flex;
-//       flex-wrap: wrap;
-//       &>*{
-//           margin-bottom: 20px;
-//       }
-//     }
-//     .big-img{
-//         order: 1;
-//         width: 100%;
-//     }
-//     .brash{
-//         order: 2;
-//         width: 100%;
-//     }
-//     .cleaner{
-//         order: 3;
-//         width: 100%;
-//     }
-//     .small-brash{
-//         order: 4;
-//         width: 100%;
-//     }
-//    }
+  @supports (display: grid) {
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      &>*{
+          margin-bottom: 20px;
+      }
+    }
+    .big-img{
+        order: 1;
+        width: 100%;
+    }
+    .brash{
+        order: 2;
+        width: 100%;
+    }
+    .cleaner{
+        order: 3;
+        width: 100%;
+    }
+    .small-brash{
+        order: 4;
+        width: 100%;
+    }
+   }
