@@ -5,4 +5,7 @@ import Parallax from 'parallax-js';
 
 // var scene = document.querySelector('.vacuum-wrapper');
 // var parallaxInstance = new Parallax(scene);
-console.log(CSS.supports("background-size", "cover"));
+
+window.onload = function () {
+    document.body.classList.add('loaded');
+}

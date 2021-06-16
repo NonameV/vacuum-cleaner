@@ -236,7 +236,7 @@ header{
 .testimonials{
     background:  right no-repeat url('./assets/image_2021-06-15_18-08-55.png');
     background-size: cover;
-    padding: 50px 0;
+    padding: 100px 0 50px 0;
     color: #fff;
     .testimonial{
         margin-bottom: 50px;
@@ -269,12 +269,42 @@ header{
     color: #000;
     justify-content: center;
     margin-bottom: 50px;
+    text-shadow: 0px 0px 2px #fff;
     &:hover{
         color: #000;
         border: 2px solid #000;
 
     }
 }
+
+//preloader 
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+  }
+  .loaded_hiding .preloader {
+    transition: 0.5s;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    opacity: 0;
+    z-index: -20;
+    transition: 2s;
+  }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     .turbo-brash{
         display: flex;
